@@ -20,7 +20,7 @@ describe "Merchants API" do
 
     merchants = JSON.parse(response.body, symbolize_names: true)
 
-    expect(merchants.count).to eq(3)
+    expect(merchants.count).to eq(1)
 
     merchants.each do |merchant|
       expect(merchant).to have_key(:id)

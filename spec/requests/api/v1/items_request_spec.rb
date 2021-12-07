@@ -24,10 +24,10 @@ describe "Items API" do
 
     items = JSON.parse(response.body, symbolize_names: true)
 
-    expect(items.count).to eq(3)
+    expect(items.count).to eq(1)
 
     items.each do |item|
-      expect(item).to have_key(:id)
+      expect(item).to have_key([:id])
       expect(item[:id]).to be_an(Integer)
 
       expect(item).to have_key(:name)
@@ -120,16 +120,19 @@ describe "Items API" do
     expect{Item.find(item1.id)}.to raise_error(ActiveRecord::RecordNotFound)
   end
 
-  xit 'can get merchant data for given item id' do
+  xit 'can get merchant name for given item' do
     merchant = create(:merchant)
     merchant1 = create(:merchant)
     item1 = create(:item, merchant_id: merchant.id)
 
     get "/api/v1/items/#{item1.id}"
 
-    json_response = JSON.parse(response.body, symbolize_names: true)
+    item = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to be_successful
 
+    expect(item).to have_key(:merchant_name)
+    expect(item[:merchant_name]).to be_a(String)
+    expect(item[:merchant_name]).to eq(merchant.name)
   end
 end
