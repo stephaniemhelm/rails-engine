@@ -8,6 +8,13 @@ class Api::V1::ItemsController < ApplicationController
     render json: Item.find(params[:id])
   end
 
+  def merchant
+    item = Item.find(params[:id])
+    item_merchant = Merchant.find_by(id: item.merchant_id)
+
+    render json: [item, item_merchant]
+  end
+
   def create
     render json: Item.create(item_params)
   end
