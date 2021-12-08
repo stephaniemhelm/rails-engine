@@ -195,7 +195,7 @@
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           null,
@@ -208,9 +208,9 @@
         "lines": [
           1,
           1,
-          2,
-          2,
-          2,
+          9,
+          9,
+          9,
           null,
           null
         ]
@@ -219,7 +219,7 @@
         "lines": [
           1,
           1,
-          2,
+          7,
           null,
           null
         ]
@@ -238,13 +238,13 @@
           null
         ]
       },
-      "/Users/stephaniemhelm/projects/rails-engine/app/models/item.rb": {
+      "/Users/stephaniemhelm/projects/rails-engine/app/models/merchant.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          1,
+          0,
           null,
           null
         ]
@@ -256,7 +256,7 @@
           null
         ]
       },
-      "/Users/stephaniemhelm/projects/rails-engine/app/models/merchant.rb": {
+      "/Users/stephaniemhelm/projects/rails-engine/app/models/item.rb": {
         "lines": [
           1,
           1,
@@ -266,8 +266,67 @@
           null,
           null
         ]
+      },
+      "/Users/stephaniemhelm/projects/rails-engine/app/controllers/api/v1/items_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/stephaniemhelm/projects/rails-engine/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/stephaniemhelm/projects/rails-engine/app/serializers/item_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/stephaniemhelm/projects/rails-engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1638912656
+    "timestamp": 1638929705
   }
 }
