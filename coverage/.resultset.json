@@ -208,9 +208,9 @@
         "lines": [
           1,
           1,
-          10,
-          10,
-          10,
+          13,
+          13,
+          13,
           null,
           null
         ]
@@ -219,7 +219,7 @@
         "lines": [
           1,
           1,
-          15,
+          16,
           null,
           null
         ]
@@ -231,14 +231,14 @@
           null,
           1,
           1,
-          null,
           1,
           1,
           null,
           1,
           1,
           null,
-          null,
+          1,
+          1,
           null,
           null,
           null
@@ -425,6 +425,29 @@
           null
         ]
       },
+      "/Users/stephaniemhelm/projects/rails-engine/spec/requests/api/v1/merchants/items_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/stephaniemhelm/projects/rails-engine/spec/requests/api/v1/merchants_request_spec.rb": {
         "lines": [
           1,
@@ -472,13 +495,17 @@
           null
         ]
       },
-      "/Users/stephaniemhelm/projects/rails-engine/app/controllers/api/v1/items/merchant_controller.rb": {
+      "/Users/stephaniemhelm/projects/rails-engine/app/controllers/api/v1/merchants_controller.rb": {
         "lines": [
           1,
           null,
           1,
+          2,
+          null,
+          null,
           1,
-          1,
+          2,
+          null,
           null,
           null
         ]
@@ -495,17 +522,7 @@
           1,
           1,
           null,
-          1,
-          null
-        ]
-      },
-      "/Users/stephaniemhelm/projects/rails-engine/app/serializers/item_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
           null,
-          1,
           null
         ]
       },
@@ -542,22 +559,28 @@
           null
         ]
       },
-      "/Users/stephaniemhelm/projects/rails-engine/app/controllers/api/v1/merchants_controller.rb": {
+      "/Users/stephaniemhelm/projects/rails-engine/app/serializers/item_serializer.rb": {
         "lines": [
           1,
-          null,
-          1,
-          2,
-          null,
-          null,
           1,
           1,
           null,
           null,
           null
         ]
+      },
+      "/Users/stephaniemhelm/projects/rails-engine/app/controllers/api/v1/merchants/items_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1638990198
+    "timestamp": 1638992161
   }
 }
