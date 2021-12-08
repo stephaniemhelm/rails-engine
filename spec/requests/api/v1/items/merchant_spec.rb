@@ -11,8 +11,8 @@ describe 'Items API' do
 
     expect(response).to be_successful
     #require "pry"; binding.pry
-    expect(item[:data][:attributes][:list_items].first).to have_key(:name)
-    expect(item[:data][:attributes][:list_items].first[:name]).to be_a(String)
-    expect(item[:data][:attributes][:list_items].first[:name]).to eq(merchant.name)
+    expect(item[:data][:attributes]).to have_key(:name)
+    expect(item[:data][:attributes][:name]).to be_a(String)
+    expect(item[:data][:attributes][:name]).to eq(merchant.name)
   end
 end

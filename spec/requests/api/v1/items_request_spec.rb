@@ -26,9 +26,6 @@ describe "Items API" do
 
     expect(items[:data].count).to eq(3)
 
-    expect(items[:data].first[:attributes][:id]).to eq(item1.id)
-    expect(items[:data].first[:attributes][:id]).to be_a(Integer)
-
     expect(items[:data].first[:attributes][:name]).to eq(item1.name)
     expect(items[:data].first[:attributes][:name]).to be_a(String)
 
@@ -51,9 +48,6 @@ describe "Items API" do
     item = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to be_successful
-
-    expect(item[:data][:attributes]).to have_key(:id)
-    expect(item[:data][:attributes][:id]).to eq(item1.id)
 
     expect(item[:data][:attributes][:name]).to eq(item1.name)
     expect(item[:data][:attributes][:name]).to be_a(String)
