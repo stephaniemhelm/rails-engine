@@ -33,7 +33,11 @@ localhost:3000
 
 - `GET /api/v1/merchants`             :requests a list of merchants
 - `GET /api/v1/merchants/id`          :requests a merchant from merchant id 
-- `GET /api/v1/merchants/:id/items`    :requests a lits of items associated with merchant id
+- `GET /api/v1/merchants/:id/items`   :requests a lits of items associated with merchant id
+
+## Searching for an Item (examples) 
+
+- `GET /api/v1/items/find?name=`      :requests an item associate with name search
 
 
 Things you may want to cover:
