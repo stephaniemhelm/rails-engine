@@ -9,9 +9,4 @@ class Api::V1::ItemsSearchController < ApplicationController
     find_name = Item.find_item(params[:name])
     render json: ItemSerializer.new(find_name)
   end
-
-  private
-    def item_params
-      params.permit(:name, :description, :unit_price, :merchant_id)
-    end
 end

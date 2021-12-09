@@ -243,7 +243,8 @@
           1,
           1,
           null,
-          null,
+          1,
+          1,
           null,
           null,
           null,
@@ -288,6 +289,22 @@
           2,
           2,
           null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
           null
         ]
       },
@@ -297,6 +314,15 @@
           1,
           null,
           1,
+          null,
+          1,
+          3,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
           null
         ]
       },
@@ -581,6 +607,48 @@
           null
         ]
       },
+      "/Users/stephaniemhelm/projects/rails-engine/spec/requests/api/v1/merchants_search_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/stephaniemhelm/projects/rails-engine/app/controllers/api/v1/items/merchants_controller.rb": {
         "lines": [
           1,
@@ -666,11 +734,6 @@
           1,
           1,
           null,
-          null,
-          1,
-          1,
-          0,
-          null,
           null
         ]
       },
@@ -702,8 +765,24 @@
           null,
           null
         ]
+      },
+      "/Users/stephaniemhelm/projects/rails-engine/app/controllers/api/v1/merchants_search_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1639083114
+    "timestamp": 1639085690
   }
 }
