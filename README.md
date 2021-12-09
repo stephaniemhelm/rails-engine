@@ -22,8 +22,12 @@ localhost:3000
 
 ## Requesting a Database Endpoint
 
-`GET /api/v1/items`               :requests a list of items
-`GET /api/vi/items/:id`           :requests an item from item id
+- `GET /api/v1/items`               :requests a list of items
+- `GET /api/vi/items/:id`           :requests an item from item id
+- `POST /api/v1/items`              :creates an item
+- `PATCH /api/v1/items/:id          :updates an item from id
+- `DESTROY /api/v1/items/id         :destroys an item from id
+- `GET /api/v1/items/:id/merchant   :requests the merchant associated with item id
 
 Things you may want to cover:
 
