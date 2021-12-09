@@ -1,7 +1,7 @@
 # RAILS ENGINE LITE README
 
 Rails Engine Lite is a Ruby on Rails Application used to expose item and merchant data.  The data is exposed through 7 different endpoints.
-This Rails application uses Ruby 2.7.2
+This application uses Ruby 2.7.2 and Rails 5.2.6.
 
 ## Application Setup 
 
@@ -13,7 +13,14 @@ cd rails-engine
 bundle install
 rails db:{create,migrate,seed}
 bundle exec rspec
+rails server
 ```
+Navigate to the browser:
+```
+localhost:3000
+```
+
+## Requesting a Database Endpoint
 
 Things you may want to cover:
 
