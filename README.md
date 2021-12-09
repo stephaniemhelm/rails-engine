@@ -35,27 +35,13 @@ localhost:3000
 - `GET /api/v1/merchants/id`          :requests a merchant from merchant id 
 - `GET /api/v1/merchants/:id/items`   :requests a lits of items associated with merchant id
 
-## Searching for an Item (examples) 
+## Searching for an Item by Name (examples) 
 
-- `GET /api/v1/items/find?name=`      :requests an item associate with name search
+- `GET /api/v1/items/find_all?name=`      :requests all items associate with name search
+- `GET /api/v1/items/find?name=`      :requests one item associate with name search
 
 
-Things you may want to cover:
 
-* Ruby version 2.7.2
 
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
