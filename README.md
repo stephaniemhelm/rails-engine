@@ -22,8 +22,8 @@ localhost:3000
 
 ## Requesting a Database Endpoint
 
-- `GET /api/v1/items`               :requests a list of items
-- `GET /api/vi/items/:id`           :requests an item from item id
+`GET /api/v1/items`               :requests a list of items
+`GET /api/vi/items/:id`           :requests an item from item id
 
 Things you may want to cover:
 
