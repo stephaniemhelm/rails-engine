@@ -40,4 +40,17 @@ describe "Merchants API" do
     expect(merchant[:data][:attributes][:name]).to be_a(String)
     expect(merchant[:data][:attributes][:name]).to eq(merchant1.name)
   end
+
+  it 'sad path: 404 status and error message when id is not valid' do
+    merchant1 = create(:merchant)
+    invalid_id = merchant1.id + 1
+
+    get "/api/v1/merchants/#{invalid_id}"
+
+    merchant_parsed = JSON.parse(response.body, symbolize_names: true)
+    
+    expect(response.status).to eq(404)
+    expect(merchant_parsed).to have_key(:errors)
+    expect(merchant_parsed[:errors][:details]).to eq('This merchant id does not exist.')
+  end
 end
