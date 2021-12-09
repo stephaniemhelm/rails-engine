@@ -22,6 +22,8 @@ localhost:3000
 
 ## Requesting a Database Endpoint
 
+```GET /api/v1/items``` requests a list of items
+
 Things you may want to cover:
 
 * Ruby version
