@@ -114,6 +114,20 @@ describe "Items API" do
     expect(item.name).to eq('Sofa')
   end
 
+  # it 'sad path: 404 status and error message when id is not valid' do
+  #   merchant1 = create(:merchant)
+  #   item1 = create(:item, merchant_id: merchant1.id)
+  #   invalid_id = item1.id + 1
+  #
+  #   get "/api/v1/items/#{invalid_id}"
+  #
+  #   item_parsed = JSON.parse(response.body, symbolize_names: true)
+  #
+  #   expect(response.status).to eq(404)
+  #   expect(item_parsed).to have_key(:errors)
+  #   expect(item_parsed[:errors][:details]).to eq('This item id does not exist.')
+  # end
+
   it 'can destory an item' do
     merchant = create(:merchant)
     item1 = create(:item, merchant_id: merchant.id)

@@ -9,15 +9,20 @@ class Api::V1::ItemsController < ApplicationController
       render json: ItemSerializer.new(Item.find(params[:id]))
     else
       render json: {errors: {details: 'This item id does not exist.'}}, status: 404
-    end 
+    end
   end
 
   def create
-    render json: Item.create(item_params)
+    render json: ItemSerializer.new(Item.create(item_params)), status: 201
   end
 
   def update
-    render json: Item.update(params[:id], item_params)
+    item = Item.find(params[:id])
+    if item.update(item_params)
+      render json: ItemSerializer.new(item)
+    else
+      render status: :not_found
+    end
   end
 
   def destroy
