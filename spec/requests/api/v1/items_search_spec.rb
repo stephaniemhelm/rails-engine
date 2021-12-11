@@ -37,4 +37,46 @@ describe "Items Search API" do
     end
     expect(results).to eq([item1.name, item2.name, item3.name])
   end
+
+  it 'can find all items by minimum price search' do
+    merchant = create(:merchant)
+    item1 = create(:item, unit_price: 100.99, merchant_id: merchant.id)
+    item2 = create(:item, unit_price: 150.99, merchant_id: merchant.id)
+    item3 = create(:item, unit_price: 211.00, merchant_id: merchant.id)
+    item4 = create(:item, unit_price: 130.55, merchant_id: merchant.id)
+    price = 150.00
+
+    get "/api/v1/items/find?min_price=#{price}"
+
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    items = parsed[:data]
+    #require "pry"; binding.pry
+    expect(response).to be_successful
+
+    results = items.map do |item|
+      item[:attributes][:unit_price]
+    end
+    expect(results).to eq(item3.unit_price)
+  end
+
+  it 'can find all items by maximum price search' do
+    merchant = create(:merchant)
+    item1 = create(:item, unit_price: 100.99, merchant_id: merchant.id)
+    item2 = create(:item, unit_price: 150.99, merchant_id: merchant.id)
+    item3 = create(:item, unit_price: 211.00, merchant_id: merchant.id)
+    item4 = create(:item, unit_price: 130.55, merchant_id: merchant.id)
+    price = 150.00
+
+    get "/api/v1/items/find?max_price=#{price}"
+
+    parsed = JSON.parse(response.body, symbolize_names: true)
+    items = parsed[:data]
+    #require "pry"; binding.pry
+    expect(response).to be_successful
+
+    results = items.map do |item|
+      item[:attributes][:unit_price]
+    end
+    expect(results).to eq([item1.unit_price, item4.unit_price])
+  end
 end

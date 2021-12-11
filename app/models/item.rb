@@ -15,4 +15,11 @@ class Item < ApplicationRecord
     where('name ILIKE ?', "%#{item_search}%")
   end
 
+  def self.min_price(price)
+    where("unit_price >= #{price}")
+  end
+
+  def self.max_price(price)
+    where("unit_price <= #{price}")
+  end
 end
