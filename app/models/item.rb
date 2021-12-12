@@ -22,4 +22,8 @@ class Item < ApplicationRecord
   def self.max_price(price)
     where("unit_price <= #{price}")
   end
+
+  def self.range(high_price, low_price)
+    where("unit_price <= #{high_price} AND unit_price >= #{low_price}")
+  end
 end
